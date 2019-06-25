@@ -18,8 +18,8 @@ import scala.Tuple2;
 
 public class Task4_Artist_userset {
 public static void main(String[] arg) {
-	String inputFile = "resources/sorted_sample.tsv";
-	//String inputFile= "resources/last-fm-sample100000.tsv";
+	//String inputFile = "resources/sorted_sample.tsv";
+	String inputFile= "resources/last-fm-sample100000.tsv";
 	String AppName = "Artist-UserSet-Group#2";
 	
 	SparkConf conf = new SparkConf().setAppName(AppName).setMaster("local[*]");
@@ -44,6 +44,7 @@ public static void main(String[] arg) {
 	//write results to a file
 	//reduced_user_artist.saveAsObjectFile("./tmp/user-artist-pair.obj");
 	//input.saveAsObjectFile("./tmp/user-artist-pair.obj");
+	reduced_user_artist.saveAsObjectFile("/media/ILAS_ex7_saved/Task4_res");
 	try {FileWriter fwrite = new FileWriter("./tmp/Task4_result.txt",false);fwrite.write("Artist\tUser\t\t"+LocalDateTime.now()+"\n");fwrite.write(textToFile);fwrite.flush();fwrite.close();} catch (IOException e) {e.printStackTrace();}
 	context.close();
 }

@@ -2,15 +2,23 @@
 //group #2 - Parsa Badiei - MA Masoud - Christian Zaharia
 package group_2;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class UserSet  {
+public class UserSet implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6802073102855555005L;
 	//constructor for the class using the artist name 
 	public UserSet(String artist, Set<String> userset) {
 		this.Artist = artist;
 		this.userSet = userset;
+	}
+	public UserSet() {
+		
 	}
 private Set<String> userSet = new HashSet<String>();
 public String Artist;
