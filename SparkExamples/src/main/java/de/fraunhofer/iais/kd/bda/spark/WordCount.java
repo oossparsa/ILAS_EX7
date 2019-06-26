@@ -1,11 +1,9 @@
 package de.fraunhofer.iais.kd.bda.spark;
 
 
-import java.io.File;
+
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.sql.Date;
 import java.util.Arrays;
 
 import org.apache.spark.SparkConf;
@@ -48,6 +46,7 @@ public class WordCount {
 			FileWriter writeOut = new FileWriter("./tmp/wordcount_result.txt",true);
 			writeOut.append(java.time.LocalTime.now()+"\t\t"+resultCount+"\n");
 			writeOut.flush();
+			writeOut.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -4,7 +4,6 @@ package group_2;
 
 import java.io.Serializable;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 public class UserSet implements Serializable {
@@ -20,8 +19,12 @@ public class UserSet implements Serializable {
 	public UserSet() {
 		
 	}
-private Set<String> userSet = new HashSet<String>();
+
+	
+public Set<String> userSet = new HashSet<String>();
 public String Artist;
+
+
 //add a single user to the user set (overloaded method)
 public Set<String> add (String username) {
 	this.userSet.add(username);
