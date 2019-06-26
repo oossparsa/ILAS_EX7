@@ -82,12 +82,5 @@ public class Task5_CloseToMark {
 		context.close();
 	}
 	
-//	public static UserSet create_profiles(JavaPairRDD<String, Set<String>> input) {
-//		ArrayList<UserSet> usersetsss = new ArrayList<UserSet>();
-//		//??? yes correct !
-//		JavaRDD<UserSet> list_of_artists = input.flatMap(pair -> {return Arrays.asList( new UserSet(pair._1,pair._2)).iterator();});
-//		// new UserSet(pair._1,pair._2)
-//		return null;
-//	}
 
 }
