@@ -46,7 +46,7 @@ public class Task5_CloseToMark {
 			}
 		}
 		System.out.println("Mark Knopfler found! distance to himself: "+ MarkKnopfler.distanceTo(MarkKnopfler.userSet));
-		Double similarityToMark = 0.85;
+		Double similarityToMark = 0.15;
 		String resTofile="Artist closer than"+ similarityToMark*100 +"% to Mark Knopfler:\n";
 		
 		//calculating similarity using List and Java directly:
