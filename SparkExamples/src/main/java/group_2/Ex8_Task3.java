@@ -30,7 +30,6 @@ public class Ex8_Task3 {
 		for(Map.Entry<String, String> pair : signatures.entrySet()) {
 			System.out.println(pair.getKey()+"\t["+pair.getValue()+"]");
 		}
-
 		context.close();
 	}
 
