@@ -23,7 +23,7 @@ public class UserSet implements Serializable {
 	
 public Set<String> userSet = new HashSet<String>();
 public String Artist;
-
+public String minHashSignature ;
 
 //add a single user to the user set (overloaded method)
 public Set<String> add (String username) {
@@ -46,6 +46,17 @@ public double distanceTo(Set<String> other) {
 	double common = Common.size();
 	//the returned value might need some precision control (might return too many digits)
 	return common/union;
+}
+
+//calculate all 20 permutations of the min hash value -> Minimum Hash Signature
+public String toMinHashSignature() {
+	String usaerSetString = this.userSet.toString();
+	String minHashSignature = Basic.hash(0, usaerSetString)+"";
+	for(int i =1 ; i<20 ; i++) {
+		minHashSignature+="," + Basic.hash(i, usaerSetString);
+	}
+	this.minHashSignature = minHashSignature;
+	return minHashSignature;
 }
 
 }

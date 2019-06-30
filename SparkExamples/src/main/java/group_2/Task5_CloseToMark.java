@@ -35,6 +35,9 @@ public class Task5_CloseToMark {
 		//PairRDD files are converted to the Userset object
 		JavaRDD<UserSet> rdduserset = user_artist_pair.flatMap(pair -> {return Arrays.asList( new UserSet(pair._1,pair._2)).iterator();});
 		
+		//Userset objects saved for future reference 
+		rdduserset.saveAsObjectFile("/media/ILAS_ex7_saved/RDD_Userset");
+		
 		//collect all teh Userset objects into a list
 		List<UserSet> listuserset = rdduserset.collect();
 		

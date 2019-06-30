@@ -7,6 +7,7 @@ public class Basic {
 	public static void main(String[] arg) {
 		//System.out.println(create_prime_numbers(10));
 		System.out.println(hash(0, "Apple"));
+		
 	}
 
 	public static long hash(int i, String s) {
