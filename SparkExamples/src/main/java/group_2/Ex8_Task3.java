@@ -30,7 +30,11 @@ public class Ex8_Task3 {
 		for(Map.Entry<String, String> pair : signatures.entrySet()) {
 			System.out.println(pair.getKey()+"\t["+pair.getValue()+"]");
 		}
+		//Mark knopfler
+		System.out.println("##################\nMark Knopfler"+signatures.get("Mark Knopfler"));
+		//Mark Knopfler		-840,-786,706,808,-1,-910,676,-233,344,-373,120,-597,993,82,-725,957,625,727,393,-418
 		context.close();
+	
 	}
 
 }
